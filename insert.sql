@@ -15,7 +15,7 @@ INSERT INTO produtos (produto, tipo_produto, data_chegada, validade_produto, pre
 
 -- _______________________________________________________________________________________________________________ 
 
-INSERT INTO clientes (nome, sobrenome, cpf_cliente) VALUES (?,?,?);
+-- INSERT INTO clientes (nome, sobrenome, cpf_cliente) VALUES (?,?,?);
 
 INSERT INTO clientes (nome, sobrenome, cpf_cliente) VALUES ('Maria', 'Silva', '123.456.789-01');
 
@@ -23,8 +23,17 @@ INSERT INTO clientes (nome, sobrenome, cpf_cliente) VALUES ('João', 'Santos', '
 
 INSERT INTO clientes (nome, sobrenome, cpf_cliente) VALUES ('Ana', 'Souza', '111.222.333-44');
 
+-- _______________________________________________________________________________________________________________ 
+
+-- INSERT INTO vendas (id_venda,funcionario_id_funcionario,cliente_id_cliente) VALUES (?,?,?);
+
+INSERT INTO vendas (funcionario_id_funcionario,cliente_id_cliente) VALUES (1,1);
+
+INSERT INTO vendas (funcionario_id_funcionario,cliente_id_cliente) VALUES (2,2);
+
+INSERT INTO vendas (funcionario_id_funcionario,cliente_id_cliente) VALUES (3,3);
+
 -- __________________________________________________________________________________________________________________
-INSERT INTO carrinho (id_venda, produto_Id_produto, quantidade) VALUES (?,?,?);
 
 INSERT INTO carrinho (id_venda, produtos_Id_produto, quantidade) VALUES (1, 1, '10');
 
@@ -35,6 +44,6 @@ INSERT INTO carrinho (id_venda, produtos_Id_produto, quantidade) VALUES (3, 3, '
 
 -- _______________________________________________________________________________________________________________
 
-INSERT INTO vendas (id_venda,funcionario_id_funcionario,cliente_id_cliente) VALUES (?,?,?);
 
-INSERT INTO creditos (id_credito,num_total_parcelas,preco_parcela,vendas_Id_venda,limite_divida,qtd_parcelas_pagas) VALUES (?,?,?,?,?,?);
+
+ INSERT INTO creditos (id_credito,num_total_parcelas,preco_parcela,vendas_Id_venda,limite_divida,qtd_parcelas_pagas) VALUES (?,?,?,?,?,?);
