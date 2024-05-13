@@ -17,9 +17,21 @@ INSERT INTO produtos (produto, tipo_produto, data_chegada, validade_produto, pre
 
 -- _______________________________________________________________________________________________________________ 
 
-Insert into clientes (id_cliente,nome,sobrenome,cpf_cliente) VALUES(?,?,?,?);
+INSERT INTO clientes (nome, sobrenome, cpf_cliente) VALUES ('Maria', 'Silva', '123.456.789-01');
 
-insert into carrinho (id_venda,produtos_Id_produto,quantidade) VALUES (?,?,?);
+INSERT INTO clientes (nome, sobrenome, cpf_cliente) VALUES ('João', 'Santos', '987.654.321-02');
+
+INSERT INTO clientes (nome, sobrenome, cpf_cliente) VALUES ('Ana', 'Souza', '111.222.333-44');
+
+-- _______________________________________________________________________________________________________________
+
+insert into carrinho (produtos_Id_produto,quantidade) VALUES (1,10);
+
+insert into carrinho (produtos_Id_produto,quantidade) VALUES (2,7);
+
+insert into carrinho (produtos_Id_produto,quantidade) VALUES (3,4);
+
+-- _______________________________________________________________________________________________________________
 
 INSERT INTO vendas (id_venda,funcionario_id_funcionario,cliente_id_cliente) VALUES (?,?,?);
 
