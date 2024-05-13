@@ -18,32 +18,29 @@ USE mercado;
 -- Table funcionarios
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS funcionarios (
-  id_funcionario INT NOT NULL,
+  id_funcionario INT  primary key auto_increment,
   tipo_funcionario VARCHAR(45) NOT NULL,
   login VARCHAR(45) NOT NULL,
   senha VARCHAR(45) NOT NULL,
-  PRIMARY KEY (id_funcionario)
 );
 
 -- -----------------------------------------------------
 -- Table clientes
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS clientes (
-  id_cliente INT NOT NULL,
+  id_cliente INT  primary key auto_increment,
   nome VARCHAR(45) NOT NULL,
   sobrenome VARCHAR(45) NOT NULL,
   cpf_cliente VARCHAR(45) NOT NULL,
-  PRIMARY KEY (id_cliente)
 );
 
 -- -----------------------------------------------------
 -- Table vendas
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS vendas (
-  id_venda INT NOT NULL,
+  id_venda INT  primary key auto_increment,
   funcionario_id_funcionario INT NOT NULL,
   cliente_id_cliente INT NOT NULL,
-  PRIMARY KEY (id_venda),
   FOREIGN KEY (funcionario_id_funcionario) REFERENCES funcionarios (id_funcionario),
   FOREIGN KEY (cliente_id_cliente) REFERENCES clientes (id_cliente)
 );
@@ -52,13 +49,12 @@ CREATE TABLE IF NOT EXISTS vendas (
 -- Table creditos
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS creditos (
-  id_credito INT NOT NULL,
+  id_credito INT primary key auto_increment,
   num_total_parcelas INT NOT NULL,
   preco_parcela INT NOT NULL,
   vendas_Id_venda INT NOT NULL,
   limite_divida DOUBLE NOT NULL,
   qtd_parcelas_pagas INT NULL,
-  PRIMARY KEY (id_credito),
   FOREIGN KEY (vendas_Id_venda) REFERENCES vendas (id_venda)
 );
 
@@ -66,20 +62,19 @@ CREATE TABLE IF NOT EXISTS creditos (
 -- Table produtos
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS produtos (
-  id_produto INT NOT NULL,
+  id_produto INT  primary key auto_increment,
   produto VARCHAR(45) NOT NULL,
   tipo_produto VARCHAR(45) NOT NULL,
   data_chegada VARCHAR(45) NOT NULL,
   validade_produto VARCHAR(45) NULL,
   preco DOUBLE NOT NULL,
-  PRIMARY KEY (id_produto)
 );
 
 -- -----------------------------------------------------
 -- Table carrinho
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS carrinho (
-  id_venda INT NOT NULL,
+  id_venda INT  primary key auto_increment,
   produtos_Id_produto INT NOT NULL,
   quantidade VARCHAR(45) NOT NULL,
   PRIMARY KEY (id_venda),
