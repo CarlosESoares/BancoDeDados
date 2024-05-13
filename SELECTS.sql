@@ -40,3 +40,14 @@ on f.id_funcionario = v.funcionario_id_funcionario
 inner join clientes as j
 on j.id_cliente = cliente_id_cliente;
 
+
+
+select * 
+from vendas 
+as v
+
+inner join funcionarios as f
+on f.id_funcionario = v.funcionario_id_funcionario
+
+Inner join clientes as c
+on c.id_cliente = v.cliente_id_cliente;
