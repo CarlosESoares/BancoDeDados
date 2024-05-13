@@ -74,9 +74,9 @@ CREATE TABLE IF NOT EXISTS produtos (
 -- Table carrinho
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS carrinho (
-  id_venda INT  primary key auto_increment,
+  id_venda INT NULL,
   produtos_Id_produto INT NOT NULL,
-  quantidade VARCHAR(45) NOT NULL,
+  quantidade VARCHAR(45) NULL,
   FOREIGN KEY (id_venda) REFERENCES produtos (id_produto),
   FOREIGN KEY (produtos_Id_produto) REFERENCES vendas (id_venda)
 );
