@@ -46,4 +46,12 @@ INSERT INTO carrinho (id_venda, produtos_Id_produto, quantidade) VALUES (3, 3, '
 
 
 
- INSERT INTO creditos (id_credito,num_total_parcelas,preco_parcela,vendas_Id_venda,limite_divida,qtd_parcelas_pagas) VALUES (?,?,?,?,?,?);
+-- INSERT INTO creditos (id_credito,num_total_parcelas,preco_parcela,vendas_Id_venda,limite_divida,qtd_parcelas_pagas) VALUES (?,?,?,?,?,?);
+
+
+ INSERT INTO creditos (num_total_parcelas,preco_parcela,vendas_Id_venda,limite_divida,qtd_parcelas_pagas) VALUES (3,50,1,59.99,2);
+
+ INSERT INTO creditos (num_total_parcelas,preco_parcela,vendas_Id_venda,limite_divida,qtd_parcelas_pagas) VALUES (2,78,2,1.00,3);
+
+ INSERT INTO creditos (num_total_parcelas,preco_parcela,vendas_Id_venda,limite_divida,qtd_parcelas_pagas) VALUES (1,200,3,0.50,99);
+
