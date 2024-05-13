@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS funcionarios (
   id_funcionario INT  primary key auto_increment,
   tipo_funcionario VARCHAR(45) NOT NULL,
   login VARCHAR(45) NOT NULL,
-  senha VARCHAR(45) NOT NULL,
+  senha VARCHAR(45) NOT NULL
 );
 
 -- -----------------------------------------------------
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS clientes (
   id_cliente INT  primary key auto_increment,
   nome VARCHAR(45) NOT NULL,
   sobrenome VARCHAR(45) NOT NULL,
-  cpf_cliente VARCHAR(45) NOT NULL,
+  cpf_cliente VARCHAR(45) NOT NULL
 );
 
 -- -----------------------------------------------------
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS produtos (
   tipo_produto VARCHAR(45) NOT NULL,
   data_chegada VARCHAR(45) NOT NULL,
   validade_produto VARCHAR(45) NULL,
-  preco DOUBLE NOT NULL,
+  preco DOUBLE NOT NULL
 );
 
 -- -----------------------------------------------------
