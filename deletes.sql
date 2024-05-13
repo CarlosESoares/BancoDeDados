@@ -4,7 +4,7 @@ delete from clientes where id_cliente = ?;
 
 delete from vendas where id_venda = ?;
 
-DELETE FROM credito WHERE id_credito = ?;
+DELETE FROM creditos WHERE id_credito = ?;
 
 DELETE FROM produtos WHERE id_produto = ?;
 
