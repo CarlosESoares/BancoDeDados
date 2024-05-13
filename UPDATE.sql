@@ -1,11 +1,11 @@
-UPDATE funcionarios SET id_funcionario = 1 WHERE id_funcionario = 0;
+UPDATE funcionarios SET id_funcionario = ? WHERE id_funcionario = ?;
 
-UPDATE produtos SET tipo_produto = "Sem estoque" WHERE tipo_produto = "fruta";
+UPDATE produtos SET tipo_produto = ? WHERE tipo_produto = ?;
 
-UPDATE clientes SET nome = "Carlos" WHERE nome = "Maria";
+UPDATE clientes SET nome = ? WHERE nome = ?;
 
-UPDATE vendas SET id_venda = 24 WHERE id_venda = 2;
+UPDATE vendas SET id_venda = ? WHERE id_venda = ?;
 
-UPDATE carrinho quantidade = 2 WHERE quantidade = 7;
+UPDATE carrinho quantidade = ? WHERE quantidade = ?;
 
-UPDATE cretidos limite_divida = 2 WHERE limite_divida = 00;
+UPDATE cretidos limite_divida = ? WHERE limite_divida = ?;
