@@ -50,4 +50,10 @@ inner join funcionarios as f
 on f.id_funcionario = v.funcionario_id_funcionario
 
 Inner join clientes as c
-on c.id_cliente = v.cliente_id_cliente;
+on c.id_cliente = v.cliente_id_cliente
+
+inner join carrinho as ca
+on ca.id_venda = v.id_venda
+
+inner join produtos as p
+on p.id_produto = ca.produtos_Id_produto; 
