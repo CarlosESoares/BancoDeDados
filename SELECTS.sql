@@ -23,6 +23,7 @@ SELECT * FROM carrinho;
 
 -- SELECT com WHERE para login (Exemplo: "funcionarios")
 SELECT * FROM funcionarios WHERE login = ?;
+SELECT * FROM funcionarios WHERE senha = ?;
 
 -- SELECT com INNER JOIN/LEFT JOIN/RIGHT JOIN para cada tabela.
 
